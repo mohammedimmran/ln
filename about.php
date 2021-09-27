@@ -49,9 +49,6 @@
       <li class="nav-item">
         <a class="nav-link" href="about.php">About</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="admin/index.php">Admin</a>
-      </li>
     
       
     </ul>
@@ -59,31 +56,6 @@
   </div>
 </nav>
 
-
-<div class="container-fluid" id="header">
-        <div class="row">
-
-            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 header-img">
-                <img class="image1 img-fluid animated" src="main.svg" alt="election">
-
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-
-                <div class="container mt-4 pt-4 " data-aos="fade-right">
-                    <h2 class="mt-4">LeafNow</h2>
-                    <h1 class="mt-4">Buy sell or donate plants and leafs
-
-                    </h1>
-                    <h1 class="mt-4">Login as ,</h1>
-
-                    <a class="btn btn-vote mt-4 " href="user/user_login.php">Buyer</a>
-                    <a class="btn btn-result mt-4 " href="company/comp_login.php">Seller</a>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

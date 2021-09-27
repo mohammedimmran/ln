@@ -9,7 +9,7 @@
         }
 
     ?>
-    <!-- db connection -->
+    
     <?php    include '../include/_dbconnect.php';       ?>
 
 

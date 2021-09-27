@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="../style.css">
 
     <title>LeafNow</title>
 
@@ -22,7 +23,7 @@ session_start();
 include '../include/_dbconnect.php'; 
 ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">LeafNow</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +58,7 @@ include '../include/_dbconnect.php';
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                 <div class="container" style="max-width:30rem">
-                    <h3 class="text-uppercase font-weight-bold text-warning">seller Login</h3>
+                    <h3 class="text-uppercase font-weight-bold text-success">seller Login</h3>
                     <?php
 
                         if(isset($_POST['seller_login'])){
@@ -112,7 +113,7 @@ include '../include/_dbconnect.php';
                             <input type="email" class="form-control" id="seller_email" name="seller_email"
                                 aria-describedby="emailHelp" required>
 
-                        </div>
+                      
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" name="seller_password" id="seller_password"
@@ -120,7 +121,7 @@ include '../include/_dbconnect.php';
                         </div>
 
                         <button type="submit" class="btn btn-primary mr-4" name="seller_login">Login</button>
-                        <a href="seller_register.php">New seller ? register here</a>
+                        <a href="index.php" class="text-success"> New seller ? register here</a>
                     </form>
 
                 </div>
