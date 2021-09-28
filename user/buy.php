@@ -13,32 +13,10 @@
             crossorigin="anonymous">
 
             <script>
-            function myFunction(){
-                const invoice = document.getElementById("invoice");
-                console.log(invoice);
-                console.log(window);
-                var opt = {
-                    margin: 1,
-                    filename: 'invoice.pdf',
-                    image: {
-                        type: 'jpeg',
-                        quality: 0.98
-                    },
-                    html2canvas: {
-                        scale: 2
-                    },
-                    jsPDF: {
-                        unit: 'in',
-                        format: 'letter',
-                        orientation: 'portrait'
-                    }
-                };
-                mpdf()
-                    .from(invoice)
-                    .set(opt)
-                    .save();
-            }
-        
+           function myFunction(){
+               document.getElementById("download").style.display = "none";
+               window.print();
+           }
         </script>
 
         <title>LeafNow</title>
@@ -52,23 +30,11 @@
 
         <?php    include '../include/_dbconnect.php';       ?>
 
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a
-        class="navbar-brand" href="#">LeafNow</a> <button class="navbar-toggler"
-        type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle
-        navigation"> <span class="navbar-toggler-icon"></span> </button> <div
-        class="collapse navbar-collapse" id="navbarSupportedContent"> <ul
-        class="navbar-nav ml-auto"> <li class="nav-item active"> <a class="nav-link"
-        href="./user_welcome.php">Home <span class="sr-only"></span></a> </li> <li
-        class="nav-item"> <a class="nav-link" href="myplants.php">Buyed Plants</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="discussion.php">Discussion</a>
-        </li> <li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a>
-        </li> </ul> </div> </nav> -->
+       <div class="container">
+           <h1 class="text-center mt-4 text-success">LeafNow</h1>
+       </div>
 
-        <div class="col-md-12 text-right mb-3">
-            <button class="btn btn-primary" id="download" onclick="myFunction()">
-                download pdf</button>
-        </div>
+        
         <?php
         
         $plant_id = $_GET['plant_id']; 
@@ -120,6 +86,12 @@
 
     ?>
 
+<div class="container">
+<div class="ext-right ">
+            <button class="btn btn-primary" id="download" onclick="myFunction()">
+                Print</button>
+        </div>
+</div>
        
         <!-- bootstrap -->
         <script
