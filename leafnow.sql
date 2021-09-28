@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2021 at 01:25 PM
+-- Generation Time: Sep 28, 2021 at 03:48 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -62,9 +62,10 @@ CREATE TABLE `plant` (
 --
 
 INSERT INTO `plant` (`seller_id`, `plant_id`, `plant_name`, `plant_price`, `about`, `grow`, `plant_care`, `status`) VALUES
-(1, 1, 'abc', 784, 'abcabc', 'abcabcabc', 'abcabcabcabc', 1),
-(1, 7, 'xyz', 1234, 'xyzxyz', 'xyzxyzxyz', 'xyzxyzxyzxyz', 1),
-(3, 8, 'tulsi', 874, 'tulsitulsi', 'tulsitulsitulsi', 'tulsitulsitulsi', 1);
+(5, 9, 'Adenium Flower Fairy (Grafted) ', 649, 'Adenium Flower Fairy (Grafted) ', 'Adenium Flower Fairy (Grafted) ', 'Adenium Flower Fairy (Grafted) ', 1),
+(5, 10, 'African Violet Purple Plant ', 549, 'African Violet Purple Plant ', 'African Violet Purple Plant ', 'African Violet Purple Plant ', 1),
+(5, 11, 'Aglaonema Lipstick Plant', 449, 'Aglaonema Lipstick Plant', 'Aglaonema Lipstick Plant', 'Aglaonema Lipstick Plant', 1),
+(5, 12, 'Rose Plant', 240, 'Rose Plant', 'Rose Plant', 'Rose Plant', 1);
 
 -- --------------------------------------------------------
 
@@ -86,9 +87,7 @@ CREATE TABLE `seller` (
 --
 
 INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_email`, `seller_number`, `seller_address`, `seller_password`) VALUES
-(1, 'Mohammed Imran', 'myselfmdimran@gmail.com', '7624947684', 'Bangalore 560032\r\nBangalore 560032', '1234'),
-(2, 'xyzxyzxyzxyzxyzxyzxyzxyzxyz', '', '', '', ''),
-(3, 'imraan', 'imraan@gmail.com', '75395185245', 'poiuytr', '$2y$10$UbYVE1tNfzrKemWJoNda1ufwY0qqfji7YQW708Qm4EZEfzWkgng4m');
+(5, 'leafnow', 'leafnow@gmail.com', '0215978463', 'Bengaluru', '$2y$10$YhGWOYb8k3sGPAbJ3ZMVCefX3M4.WJhTIYU.zIv7PZnagMpSjxcpC');
 
 -- --------------------------------------------------------
 
@@ -111,14 +110,15 @@ CREATE TABLE `users_applied_plant_db` (
 --
 
 INSERT INTO `users_applied_plant_db` (`users_applied_plant_id`, `user_id`, `plant_id`, `seller_id`, `plant_name`, `seller_name`, `plant_price`) VALUES
-(5, 1, 1, 1, 'abc', 'Mohammed Imran', 784),
-(6, 1, 1, 1, 'abc', 'Mohammed Imran', 784),
-(15, 1, 7, 1, 'xyz', 'Mohammed Imran', 1234),
-(16, 3, 1, 1, 'abc', 'Mohammed Imran', 784),
-(17, 3, 7, 1, 'xyz', 'Mohammed Imran', 1234),
-(18, 3, 7, 1, 'xyz', 'Mohammed Imran', 1234),
-(19, 3, 7, 1, 'xyz', 'Mohammed Imran', 1234),
-(20, 3, 8, 3, 'tulsi', 'imraan', 874);
+(51, 5, 10, 5, 'African Violet Purple Plant ', 'leafnow', 549),
+(52, 5, 12, 5, 'Rose Plant', 'leafnow', 240),
+(53, 7, 11, 5, 'Aglaonema Lipstick Plant', 'leafnow', 449),
+(54, 7, 9, 5, 'Adenium Flower Fairy (Grafted) ', 'leafnow', 649),
+(55, 8, 9, 5, 'Adenium Flower Fairy (Grafted) ', 'leafnow', 649),
+(56, 8, 10, 5, 'African Violet Purple Plant ', 'leafnow', 549),
+(57, 8, 11, 5, 'Aglaonema Lipstick Plant', 'leafnow', 449),
+(58, 6, 10, 5, 'African Violet Purple Plant ', 'leafnow', 549),
+(59, 6, 12, 5, 'Rose Plant', 'leafnow', 240);
 
 -- --------------------------------------------------------
 
@@ -140,9 +140,10 @@ CREATE TABLE `user_db` (
 --
 
 INSERT INTO `user_db` (`user_id`, `user_name`, `user_email`, `user_number`, `user_address`, `user_password`) VALUES
-(1, 'mohammed@gmail.com', 'myselfmdimran@gmail.com', '7624947684', 'Bangalore 560032\r\nBangalore 560032', '1234'),
-(2, '123@gmail.com', '123@gmail.com', '14785239', 'qwertyuio', ''),
-(3, 'imran', 'imran@gmail.com', '12589634', 'qwertyui', '$2y$10$r4BIgUY9zZHNW/PKVv/97u26CZK8AKO8IMSTnhpoPoBVGQ7OuWiB2');
+(5, 'mohammed imran', 'mohammedimran@gmail.com', '7624947684', 'Bangalore 560032\r\nBangalore 560032', '$2y$10$MghtZcCdqVvSkRTIPKANUOE/k6boHr4dw3fXNtoHR5TtOvg5Edl.S'),
+(6, 'rhia', 'rhia@gmail.com', '9836000455', 'bangalore', '$2y$10$t1GsoyxBkFv5a2pPssFv4.jb7bvav73sObGywNHzKqZ/oMMUvPsWe'),
+(7, 'shariff', 'shariff@gmail.com', '8073552065', 'bangalore', '$2y$10$A2YZOsnHneiMJEJApqytru/4VGOtOkKln9qCNJlyrI7/4wAxrupmW'),
+(8, 'bhavya', 'bhavya@gmail.com', '7338230529', 'bangalore', '$2y$10$dy5/2L/O2UAfDbzEOfemx.Y22EXZnig85Tizu0QBjTi9GVEuWw.rK');
 
 --
 -- Indexes for dumped tables
@@ -196,25 +197,25 @@ ALTER TABLE `admin_db`
 -- AUTO_INCREMENT for table `plant`
 --
 ALTER TABLE `plant`
-  MODIFY `plant_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `plant_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `seller`
 --
 ALTER TABLE `seller`
-  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users_applied_plant_db`
 --
 ALTER TABLE `users_applied_plant_db`
-  MODIFY `users_applied_plant_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `users_applied_plant_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `user_db`
 --
 ALTER TABLE `user_db`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

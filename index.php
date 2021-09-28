@@ -78,7 +78,7 @@
                     <h1 class="mt-4">Login as ,</h1>
 
                     <a class="btn btn-vote mt-4 " href="user/user_login.php">Buyer</a>
-                    <a class="btn btn-result mt-4 " href="company/comp_login.php">Seller</a>
+                    <a class="btn btn-result mt-4 " href="seller/index.php">Seller</a>
 
                 </div>
             </div>
